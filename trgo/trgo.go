@@ -22,7 +22,7 @@ func FindNamesakeChild(n *Node, name string, ch chan *Node) {
 		if v.Name == name {
 			n := WhosNext(v.Name)
 			if n != "" {
-				FindNamesakeChild(v, "alo2", ch)
+				FindNamesakeChild(v, n, ch)
 			}
 			ch <- v
 		}
